@@ -23,6 +23,7 @@ st.set_page_config(
 )
 
 # --- 8. SIDEBAR ---
+# Respetando tu última actualización (sin width en las imágenes)
 with st.sidebar:
     st.title("DataInsights Colombia")
     
@@ -41,6 +42,8 @@ with st.sidebar:
     st.caption("© Datainsights Colombia 2025. \nTodos los derechos reservados.")
 
 # --- PRE-CARGAR IMÁGENES COMO BASE64 ---
+# Añadimos el logo principal a la carga de Base64
+img_logo_b64 = get_image_as_base64("logo_datai.png")
 img_bi_b64 = get_image_as_base64("BI.png")
 img_ia_b64 = get_image_as_base64("IA.png")
 img_urbox_b64 = get_image_as_base64("urbox.png")
@@ -49,10 +52,20 @@ img_iana_b64 = get_image_as_base64("IANA.png")
 
 # --- CUERPO PRINCIPAL DE LA PÁGINA ---
 
-# --- 1. LOGO EN CABECERA CENTRADO ---
+# --- 1. LOGO EN CABECERA CENTRADO (AHORA CLICKABLE) ---
 col1, col2, col3 = st.columns([1, 2, 1]) 
 with col2:
-    st.image("logo_datai.png", use_column_width=True)
+    if img_logo_b64:
+        st.markdown(
+            f"""
+            <a href='https://datainsightsco.com/' target='_blank'>
+                <img src='data:image/png;base64,{img_logo_b64}' style='width: 100%; max-width: 600px; display: block; margin-left: auto; margin-right: auto;'>
+            </a>
+            """,
+            unsafe_allow_html=True
+        )
+    else:
+        st.error("No se encontró la imagen logo_datai.png")
 
 # --- 2. NOMBRE GRANDE EN NEGRITA (CENTRADO) ---
 st.markdown("<h1 style='text-align: center; font-weight: bold;'>Datainsights Colombia</h1>", unsafe_allow_html=True)
@@ -71,14 +84,14 @@ st.markdown(
 st.divider()
 
 # --- 4. SUBTÍTULO "Nuestra Esencia" ---
+# Actualizado según tu código
 st.subheader("Nuestra Esencia", divider="blue")
 
 # --- 5. CUADROS "QUÉ HACEMOS" (B.I. y I.A.) ---
 col_bi, col_ia = st.columns(2, gap="large") 
 
-# 5.1. Cuadro 1: Business Intelligence (con imagen clickable)
+# 5.1. Cuadro 1: Business Intelligence
 with col_bi:
-    # ELIMINAMOS 'border=True' DE st.container()
     with st.container(): 
         if img_bi_b64:
             st.markdown(
@@ -95,11 +108,11 @@ with col_bi:
             st.error("No se encontró la imagen BI.png")
         
         st.markdown("<h4 style='text-align: center;'>Business Intelligence</h4>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center;'>Potenciamos tus decisiones con visualizaciones claras y modelos de datos robustos.</p>", unsafe_allow_html=True)
+        # MEJORA DE SIMETRÍA: Añadido 'min-height: 60px;'
+        st.markdown("<p style='text-align: center; min-height: 60px;'>Potenciamos tus decisiones con visualizaciones claras y modelos de datos robustos.</p>", unsafe_allow_html=True)
 
-# 5.2. Cuadro 2: Inteligencia Artificial (con imagen clickable)
+# 5.2. Cuadro 2: Inteligencia Artificial
 with col_ia:
-    # ELIMINAMOS 'border=True' DE st.container()
     with st.container():
         if img_ia_b64:
             st.markdown(
@@ -116,7 +129,8 @@ with col_ia:
             st.error("No se encontró la imagen IA.png")
 
         st.markdown("<h4 style='text-align: center;'>Inteligencia Artificial</h4>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center;'>Implementamos agentes de IA y modelos predictivos para automatizar y optimizar procesos.</p>", unsafe_allow_html=True)
+        # MEJORA DE SIMETRÍA: Añadido 'min-height: 60px;'
+        st.markdown("<p style='text-align: center; min-height: 60px;'>Implementamos agentes de IA y modelos predictivos para automatizar y optimizar procesos.</p>", unsafe_allow_html=True)
 
 st.divider()
 
@@ -126,9 +140,8 @@ st.subheader("Nuestros Productos", divider="blue")
 # --- 7. CUADROS "NUESTROS PRODUCTOS" (Urbox y IANA) ---
 col_urbox, col_iana = st.columns(2, gap="large")
 
-# 7.1. Cuadro 3: Urbox (con imagen clickable)
+# 7.1. Cuadro 3: Urbox
 with col_urbox:
-    # ELIMINAMOS 'border=True' DE st.container()
     with st.container():
         if img_urbox_b64:
             st.markdown(
@@ -145,11 +158,11 @@ with col_urbox:
             st.error("No se encontró la imagen urbox.png")
 
         st.markdown("<h4 style='text-align: center;'>Urbox</h4>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center;'>Nuestra plataforma modular para la gestión inteligente de servicios públicos.</p>", unsafe_allow_html=True)
+        # MEJORA DE SIMETRÍA: Añadido 'min-height: 60px;'
+        st.markdown("<p style='text-align: center; min-height: 60px;'>Nuestra plataforma modular para la gestión inteligente de servicios públicos.</p>", unsafe_allow_html=True)
 
-# 7.2. Cuadro 4: IANA (con imagen clickable)
+# 7.2. Cuadro 4: IANA
 with col_iana:
-    # ELIMINAMOS 'border=True' DE st.container()
     with st.container():
         if img_iana_b64:
             st.markdown(
@@ -166,5 +179,5 @@ with col_iana:
             st.error("No se encontró la imagen IANA.png")
 
         st.markdown("<h4 style='text-align: center;'>IANA</h4>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center;'>Agente de IA conversacional para el análisis y gestión de datos empresariales.</p>", unsafe_allow_html=True)
-
+        # MEJORA DE SIMETRTÍA: Añadido 'min-height: 60px;'
+        st.markdown("<p style='text-align: center; min-height: 60px;'>Agente de IA conversacional para el análisis y gestión de datos empresariales.</p>", unsafe_allow_html=True)
