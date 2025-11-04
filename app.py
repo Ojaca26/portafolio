@@ -34,7 +34,7 @@ with st.sidebar:
     
     st.image("foto2.png")
     st.markdown("**John Alexander Zapata Ortiz**")
-    st.caption("CTO & Co-Fundador") 
+    st.caption("CEO & Co-Fundador") 
     
     st.divider()
     
@@ -204,3 +204,4 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
