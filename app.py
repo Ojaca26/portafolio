@@ -37,9 +37,6 @@ with st.sidebar:
     st.caption("CTO & Co-Fundador") 
     
     st.divider()
-    
-    # ELIMINAMOS EL PIE DE PÁGINA DE AQUÍ
-    # st.caption("© Datainsights Colombia 2025. \nTodos los derechos reservados.")
 
 # --- PRE-CARGAR IMÁGENES COMO BASE64 ---
 img_logo_b64 = get_image_as_base64("logo_datai.png")
@@ -176,7 +173,7 @@ with col_iana:
         st.markdown("<h4 style='text-align: center;'>IANA</h4>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center; min-height: 60px;'>Agente de IA conversacional para el análisis y gestión de datos empresariales.</p>", unsafe_allow_html=True)
 
-# --- NUEVA SECCIÓN: "HABLEMOS" (CONTACTO) ---
+# --- SECCIÓN "HABLEMOS" ACTUALIZADA ---
 st.divider()
 st.subheader("Hablemos", divider="blue")
 
@@ -189,16 +186,17 @@ with col_contact_2:
     # Centramos los botones
     st.markdown("<div style='text-align: center; margin-top: 25px;'>", unsafe_allow_html=True)
     
-    # Reemplaza con tu email de contacto
-    st.link_button("Escríbenos un Email 📧", "mailto:contacto@datainsightsco.com")
+    # --- CAMBIO: Botones de WhatsApp ---
+    # Botón de WhatsApp para Datainsights (Número sin el +)
+    st.link_button("Chatea con Datainsights 💬", "https://wa.me/573011340430")
     
-    # Reemplaza con tu link de Calendly o similar si tienes
-    st.link_button("Agenda una Reunión 📅", "https://calendly.com/TU_USUARIO_CALENDLY")
+    # Botón de WhatsApp para IANA (Número sin el +)
+    st.link_button("Chatea con IANA 🤖", "https://wa.me/573054293451")
     
     st.markdown("</div>", unsafe_allow_html=True)
 
 
-# --- NUEVO PIE DE PÁGINA (CENTRADO) ---
+# --- PIE DE PÁGINA (CENTRADO) ---
 st.divider()
 st.markdown(
     """
