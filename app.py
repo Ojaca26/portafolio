@@ -23,7 +23,6 @@ st.set_page_config(
 )
 
 # --- 8. SIDEBAR ---
-# Respetando tu última actualización (sin width en las imágenes)
 with st.sidebar:
     st.title("DataInsights Colombia")
     
@@ -39,10 +38,10 @@ with st.sidebar:
     
     st.divider()
     
-    st.caption("© Datainsights Colombia 2025. \nTodos los derechos reservados.")
+    # ELIMINAMOS EL PIE DE PÁGINA DE AQUÍ
+    # st.caption("© Datainsights Colombia 2025. \nTodos los derechos reservados.")
 
 # --- PRE-CARGAR IMÁGENES COMO BASE64 ---
-# Añadimos el logo principal a la carga de Base64
 img_logo_b64 = get_image_as_base64("logo_datai.png")
 img_bi_b64 = get_image_as_base64("BI.png")
 img_ia_b64 = get_image_as_base64("IA.png")
@@ -52,7 +51,7 @@ img_iana_b64 = get_image_as_base64("IANA.png")
 
 # --- CUERPO PRINCIPAL DE LA PÁGINA ---
 
-# --- 1. LOGO EN CABECERA CENTRADO (AHORA CLICKABLE) ---
+# --- 1. LOGO EN CABECERA CENTRADO (CLICKABLE) ---
 col1, col2, col3 = st.columns([1, 2, 1]) 
 with col2:
     if img_logo_b64:
@@ -84,7 +83,6 @@ st.markdown(
 st.divider()
 
 # --- 4. SUBTÍTULO "Nuestra Esencia" ---
-# Actualizado según tu código
 st.subheader("Nuestra Esencia", divider="blue")
 
 # --- 5. CUADROS "QUÉ HACEMOS" (B.I. y I.A.) ---
@@ -108,7 +106,6 @@ with col_bi:
             st.error("No se encontró la imagen BI.png")
         
         st.markdown("<h4 style='text-align: center;'>Business Intelligence</h4>", unsafe_allow_html=True)
-        # MEJORA DE SIMETRÍA: Añadido 'min-height: 60px;'
         st.markdown("<p style='text-align: center; min-height: 60px;'>Potenciamos tus decisiones con visualizaciones claras y modelos de datos robustos.</p>", unsafe_allow_html=True)
 
 # 5.2. Cuadro 2: Inteligencia Artificial
@@ -129,7 +126,6 @@ with col_ia:
             st.error("No se encontró la imagen IA.png")
 
         st.markdown("<h4 style='text-align: center;'>Inteligencia Artificial</h4>", unsafe_allow_html=True)
-        # MEJORA DE SIMETRÍA: Añadido 'min-height: 60px;'
         st.markdown("<p style='text-align: center; min-height: 60px;'>Implementamos agentes de IA y modelos predictivos para automatizar y optimizar procesos.</p>", unsafe_allow_html=True)
 
 st.divider()
@@ -158,7 +154,6 @@ with col_urbox:
             st.error("No se encontró la imagen urbox.png")
 
         st.markdown("<h4 style='text-align: center;'>Urbox</h4>", unsafe_allow_html=True)
-        # MEJORA DE SIMETRÍA: Añadido 'min-height: 60px;'
         st.markdown("<p style='text-align: center; min-height: 60px;'>Nuestra plataforma modular para la gestión inteligente de servicios públicos.</p>", unsafe_allow_html=True)
 
 # 7.2. Cuadro 4: IANA
@@ -179,5 +174,37 @@ with col_iana:
             st.error("No se encontró la imagen IANA.png")
 
         st.markdown("<h4 style='text-align: center;'>IANA</h4>", unsafe_allow_html=True)
-        # MEJORA DE SIMETRTÍA: Añadido 'min-height: 60px;'
         st.markdown("<p style='text-align: center; min-height: 60px;'>Agente de IA conversacional para el análisis y gestión de datos empresariales.</p>", unsafe_allow_html=True)
+
+# --- NUEVA SECCIÓN: "HABLEMOS" (CONTACTO) ---
+st.divider()
+st.subheader("Hablemos", divider="blue")
+
+col_contact_1, col_contact_2 = st.columns([1, 1], gap="large")
+
+with col_contact_1:
+    st.markdown("<p style='text-align: center; font-size: 1.1em; margin-top: 20px;'>¿Listo para transformar tus datos? <br>Ponte en contacto con nosotros y descubre cómo la IA y el Business Intelligence pueden impulsar tu negocio.</p>", unsafe_allow_html=True)
+
+with col_contact_2:
+    # Centramos los botones
+    st.markdown("<div style='text-align: center; margin-top: 25px;'>", unsafe_allow_html=True)
+    
+    # Reemplaza con tu email de contacto
+    st.link_button("Escríbenos un Email 📧", "mailto:contacto@datainsightsco.com")
+    
+    # Reemplaza con tu link de Calendly o similar si tienes
+    st.link_button("Agenda una Reunión 📅", "https://calendly.com/TU_USUARIO_CALENDLY")
+    
+    st.markdown("</div>", unsafe_allow_html=True)
+
+
+# --- NUEVO PIE DE PÁGINA (CENTRADO) ---
+st.divider()
+st.markdown(
+    """
+    <div style='text-align: center; color: grey; font-size: 0.9em;'>
+    © Datainsights Colombia 2025. Todos los derechos reservados.
+    </div>
+    """,
+    unsafe_allow_html=True
+)
