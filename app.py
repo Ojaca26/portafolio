@@ -164,7 +164,7 @@ with col_iana:
                 f"""
                 <a href='https://iana-datainsightsco.com/' target='_blank' style='text-decoration: none;'>
                     <div style='display: flex; justify-content: center; align-items: center; min-height: 200px;'>
-                        <img src='data:image/png;base64,{img_iana_b64}' width='250' style='max-width: 100%; height: auto; display: block;'>
+                        <img src='data:image/png;base64,{img_iana_b64}' width='350' style='max-width: 100%; height: auto; display: block;'>
                     </div>
                 </a>
                 """,
@@ -204,4 +204,5 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
