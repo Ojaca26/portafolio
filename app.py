@@ -26,13 +26,13 @@ st.set_page_config(
 with st.sidebar:
     st.title("DataInsights Colombia")
     
-    st.image("foto1.png", width=150) 
+    st.image("foto1.png") 
     st.markdown("**Oscar Javier Carabali Portela**")
     st.caption("CEO & Co-Fundador") 
     
     st.divider()
     
-    st.image("foto2.png", width=150)
+    st.image("foto2.png")
     st.markdown("**John Alexander Zapata Ortiz**")
     st.caption("CTO & Co-Fundador") 
     
@@ -70,8 +70,8 @@ st.markdown(
 
 st.divider()
 
-# --- 4. SUBTÍTULO "QUÉ HACEMOS" ---
-st.subheader("Que hacemos", divider="blue")
+# --- 4. SUBTÍTULO "Nuestra Esencia" ---
+st.subheader("Nuestra Esencia", divider="blue")
 
 # --- 5. CUADROS "QUÉ HACEMOS" (B.I. y I.A.) ---
 col_bi, col_ia = st.columns(2, gap="large") 
@@ -167,3 +167,4 @@ with col_iana:
 
         st.markdown("<h4 style='text-align: center;'>IANA</h4>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center;'>Agente de IA conversacional para el análisis y gestión de datos empresariales.</p>", unsafe_allow_html=True)
+
