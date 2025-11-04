@@ -54,7 +54,7 @@ with st.sidebar:
 img_bi_b64 = get_image_as_base64("BI.png")
 img_ia_b64 = get_image_as_base64("IA.png")
 img_urbox_b64 = get_image_as_base64("urbox.png")
-img_iana_b64 = get_image_as_base64("IANA.png")
+img_iana_b64 = get_image_as_base64("iana.png")
 
 
 # --- CUERPO PRINCIPAL DE LA PÁGINA ---
@@ -171,3 +171,4 @@ with col_iana:
 
         st.markdown("#### IANA")
         st.write("Agente de IA conversacional para el análisis y gestión de datos empresariales.")
+
