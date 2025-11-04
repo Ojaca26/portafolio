@@ -64,7 +64,7 @@ col_bi, col_ia = st.columns(2, gap="large") # Dos columnas con un espacio grande
 with col_bi:
     # Usamos st.container(border=True) para crear un efecto de "tarjeta"
     with st.container(border=True):
-        st.image("B.I.png")
+        st.image("BI.png")
         st.markdown("#### Business Intelligence")
         st.write("Potenciamos tus decisiones con visualizaciones claras y modelos de datos robustos.")
         # Reemplaza la URL por la correcta
@@ -73,11 +73,11 @@ with col_bi:
 # 5.2. Cuadro 2: Inteligencia Artificial
 with col_ia:
     with st.container(border=True):
-        st.image("I.A.png")
+        st.image("IA.png")
         st.markdown("#### Inteligencia Artificial")
         st.write("Implementamos agentes de IA y modelos predictivos para automatizar y optimizar procesos.")
         # Reemplaza la URL por la correcta
-        st.link_button("Conoce más de I.A.", "https://url-para-ia.com")
+        st.link_button("Conoce más de I.A.", "https://agentssmartenterprice-gspen5mrkzof7fzqbmatys.streamlit.app/")
 
 st.divider() # Otro separador visual
 
@@ -94,7 +94,7 @@ with col_urbox:
         st.markdown("#### Urbox")
         st.write("Nuestra plataforma modular para la gestión inteligente de servicios públicos.")
         # Reemplaza la URL por la correcta
-        st.link_button("Ir a Urbox", "https://url-para-urbox.com")
+        st.link_button("Ir a Urbox", "https://urbox.com.co/")
 
 # 7.2. Cuadro 4: IANA
 with col_iana:
@@ -103,4 +103,4 @@ with col_iana:
         st.markdown("#### IANA")
         st.write("Agente de IA conversacional para el análisis y gestión de datos empresariales.")
         # Reemplaza la URL por la correcta
-        st.link_button("Ir a IANA", "https://url-para-iana.com")
+        st.link_button("Ir a IANA", "https://iana-datainsightsco.com/")
