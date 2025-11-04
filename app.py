@@ -14,14 +14,14 @@ with st.sidebar:
     st.title("DataInsights Colombia")
     
     # 8.2. Foto 1 y Nombre
-    st.image("foto1.png")
+    st.image("foto1.png", width=150)
     st.markdown("**Oscar Javier Carabali Portela**")
     st.caption("CEO & Co-Fundador") # (Puedes añadir un caption si quieres)
     
     st.divider() # Separador
     
     # 8.3. Foto 2 y Nombre
-    st.image("foto2.png")
+    st.image("foto2.png", width=150)
     st.markdown("**John Alexander Zapata Ortiz**")
     st.caption("CTO & Co-Fundador") # (Puedes añadir un caption si quieres)
     
@@ -64,7 +64,7 @@ col_bi, col_ia = st.columns(2, gap="large") # Dos columnas con un espacio grande
 with col_bi:
     # Usamos st.container(border=True) para crear un efecto de "tarjeta"
     with st.container(border=True):
-        st.image("BI.png")
+        st.image("BI.png", width=250)
         st.markdown("#### Business Intelligence")
         st.write("Potenciamos tus decisiones con visualizaciones claras y modelos de datos robustos.")
         # Reemplaza la URL por la correcta
@@ -73,7 +73,7 @@ with col_bi:
 # 5.2. Cuadro 2: Inteligencia Artificial
 with col_ia:
     with st.container(border=True):
-        st.image("IA.png")
+        st.image("IA.png", width=250)
         st.markdown("#### Inteligencia Artificial")
         st.write("Implementamos agentes de IA y modelos predictivos para automatizar y optimizar procesos.")
         # Reemplaza la URL por la correcta
@@ -90,7 +90,7 @@ col_urbox, col_iana = st.columns(2, gap="large")
 # 7.1. Cuadro 3: Urbox
 with col_urbox:
     with st.container(border=True):
-        st.image("urbox.png")
+        st.image("urbox.png", width=250)
         st.markdown("#### Urbox")
         st.write("Nuestra plataforma modular para la gestión inteligente de servicios públicos.")
         # Reemplaza la URL por la correcta
@@ -99,8 +99,9 @@ with col_urbox:
 # 7.2. Cuadro 4: IANA
 with col_iana:
     with st.container(border=True):
-        st.image("IANA.png")
+        st.image("IANA.png", width=250)
         st.markdown("#### IANA")
         st.write("Agente de IA conversacional para el análisis y gestión de datos empresariales.")
         # Reemplaza la URL por la correcta
         st.link_button("Ir a IANA", "https://iana-datainsightsco.com/")
+
