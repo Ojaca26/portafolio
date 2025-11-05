@@ -114,7 +114,7 @@ with col_ia:
         if img_ia_b64:
             st.markdown(
                 f"""
-                <a href='https://agentssmartenterprice-gspen5mrkzof7fzqbmatys.streamlit.app/' target='_blank' style='text-decoration: none;'>
+                <a href='https://automundial-d44yn2madouz8aebsdtsl9.streamlit.app/' target='_blank' style='text-decoration: none;'>
                     <div style='display: flex; justify-content: center; align-items: center; min-height: 200px;'>
                         <img src='data:image/png;base64,{img_ia_b64}' width='250' style='max-width: 100%; height: auto; display: block;'>
                     </div>
@@ -204,6 +204,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 
 
