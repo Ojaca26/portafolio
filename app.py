@@ -94,7 +94,7 @@ with col_bi:
         if img_bi_b64:
             st.markdown(
                 f"""
-                <a href='https://url-para-bi.com' target='_blank' style='text-decoration: none;'>
+                <a href='https://app.powerbi.com/groups/me/reports/ef3c4d7e-a346-4412-8a78-c530469d56a6/fdab9bf3b390c6d9b576?experience=power-bi' target='_blank' style='text-decoration: none;'>
                     <div style='display: flex; justify-content: center; align-items: center; min-height: 200px;'> 
                         <img src='data:image/png;base64,{img_bi_b64}' width='250' style='max-width: 100%; height: auto; display: block;'>
                     </div>
@@ -204,6 +204,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 
 
